@@ -1,0 +1,65 @@
+
+
+
+
+<html>
+
+<body>
+
+
+ <h3> Your balance is : {{balance}}</h3>
+
+ <h5> {{msg}} </h5>
+
+
+ <form action="{{url_for('indexs')}}" , method="POST" , id="atm" >
+
+  Amount : <input type="number" , name="amount" required /></br></br>
+
+  <input type="submit" , name="action" , value="withdraw" , onclick="return validateForm(this)">
+        <input type="submit" , name="action" , value="deposit" , onclick="return validateForm(this)">
+       
+
+   </form>
+
+<script>
+
+
+     function validateForm(button)
+ {
+
+  var form = document.getElementById("atm");
+
+if(form.amount.value==" " ){
+   alert("amount is required");
+   return false;
+         }
+
+       if (parseInt(form.amount.value)<0){
+		alert("can not enter negative amount");
+		return false;
+         }
+
+       
+       if(button.value == "withdraw" && parseInt(form.amount.value)>5000){
+         	alert("can not withdraw more than 5000");
+
+          	return false;
+       }
+     
+        if(button.value == "deposit" && parseInt(form.amount.value)>10000){
+         	alert("can not deposit more than 10000");
+
+         	 return false;
+       }
+
+   
+      return true;
+   
+  }
+     
+
+</script>
+</body>
+
+</html>
