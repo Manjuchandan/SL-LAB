@@ -1,0 +1,45 @@
+<html>
+
+<body>
+
+ <form>
+
+ ITEM NAME: <input type="text"><br><br>
+
+ Price:<select id="price">
+
+ <option value="50">Rs 50</option>
+ <option value="100">Rs 100</option>
+ <option value="150">Rs 150</option>
+ <option value="200">Rs 200</option>
+</select><br><br>
+
+ No of Items Bought: <input type="number" id="no"><br><br>
+
+</form>
+
+ <button onclick="fun()">Submit</button><br><br>
+
+ Total cost to be paid in Rs: <p id="cost"></p>
+
+ <button onclick="aler()">Paid</button><br><br>
+
+<script>
+
+ function fun()
+{
+
+  var x=document.getElementById("no").value*parseInt(document.getElementById("price").value);
+   document.getElementById("cost").innerHTML=x;
+
+ }
+
+function aler()
+{
+  alert('Amount has been paid!');
+}
+
+</script>
+</body>
+</html>
+
