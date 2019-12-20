@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> PATIENT DYNAMIC</title>
+
+</head>
+
+<body>
+
+  <p id="hospital"></p>
+  <p id="patient" onmouseover="func()" onmouseout="fun()">Patient Details</p>
+  <p id="pdata"></p>
+
+<script>
+
+	var h = [
+
+			{"name":"Ramaiah Hospital","loc":"Mattikere"},
+			{"name":"Apollo","loc":"Malleswaram"}
+                
+                  ]
+
+          var x=" ";
+
+	   for(var j=0;j<h.length;j++)
+           {
+
+               x+="Hospital Name : "+h[j].name+"<br>"+"Location : "+h[j].loc+"<br>";
+           }
+
+          document.getElementById("hospital").innerHTML=x;
+
+  
+
+  
+function func()
+{
+
+   var p = [
+		{"name":"john","no":"123","tests":["a","b","c"]},
+                {"name":"smith","no":"456","tests":["d","e","f"]}
+           ]
+
+   var x=" ";
+
+    for (var i=0;i<p.length;i++)
+    {
+
+      x+="Name :"+p[i].name+"<br>"+"Adhar No : "+p[i].no+"<br>"+"Tests : ";
+      for(var a=0;a<p[i].tests.length;a++)
+        x+=p[i].tests[a]+",";
+        x+="<br>";
+      }
+
+     document.getElementById("patient").style.color="red";
+     document.getElementById("pdata").innerHTML=x;
+
+ }
+
+function fun()
+{
+  document.getElementById("patient").style.color="black";
+     document.getElementById("pdata").innerHTML="";
+
+ }
+</script>
+</body>
+</html>
+

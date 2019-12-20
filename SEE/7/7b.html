@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>CARS DYNAMIC</title>
+
+</head>
+<body>
+
+	<p id="car1" onmouseover="cars1()" onmouseout="cars1a()">BMW</p>
+        <p id="1stcar"></p>
+	<p id="car2" onmouseover="cars2()" onmouseout="cars2a()">AUDI</p>
+        <p id="2ndcar"></p>
+
+
+
+ <script>
+
+function cars1()
+{
+
+  var c=[
+
+	{"name":"BMW","year":"2018","price":"50Lakhs","models":["520","c12","d45"]}
+      
+       ]
+        
+   var x=" ";
+
+  for(var i=0;i<c.length;i++)
+  {
+
+    x+="Name : "+c[i].name+"<br>"+"Year :"+c[i].year+"<br>"+"Price :"+c[i].price+"<br>"+"Models :";
+    for(var j=0;j<c[i].models.length;j++)
+    x+=c[i].models[j]+" , ";
+    x+="<br>";
+
+  }
+document.getElementById("car1").style.color="red";
+document.getElementById("1stcar").innerHTML=x;
+
+}
+
+function cars1a()
+{
+  document.getElementById("car1").style.color="black";
+document.getElementById("1stcar").innerHTML=" ";
+}
+
+
+
+function cars2()
+{
+
+  var c=[
+
+	{"name":"AUDI","year":"2019","price":"80Lakhs","models":["Q3","Q7","Q5"]}
+      
+       ]
+        
+   var x=" ";
+
+  for(var i=0;i<c.length;i++)
+  {
+
+    x+="Name : "+c[i].name+"<br>"+"Year :"+c[i].year+"<br>"+"Price :"+c[i].price+"<br>"+"Models :";
+    for(var j=0;j<c[i].models.length;j++)
+    x+=c[i].models[j]+" , ";
+    x+="<br>";
+
+  }
+document.getElementById("car2").style.color="green";
+document.getElementById("2ndcar").innerHTML=x;
+
+}
+
+function cars2a()
+{
+  document.getElementById("car2").style.color="black";
+document.getElementById("2ndcar").innerHTML=" ";
+}
+
+
+</script>
+</body>
+</html>
+
