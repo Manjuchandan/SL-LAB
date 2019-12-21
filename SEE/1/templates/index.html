@@ -11,36 +11,13 @@
 
 	Amount: <input type="number" name="amount" required><br><br>
 
-       <input type="submit" name="action" value="withdraw" onclick="validateForm(this)">
-       <input type="submit" name="action" value="deposit" onclick="validateForm(this)">
+       <input type="submit" name="action" value="withdraw">
+       <input type="submit" name="action" value="deposit" >
  
 	
    </form>
 
-<script>
 
- function validateForm(button)
-{
-
-  var form = document.getElementById("atm");
-
- 
- if(form.amount.value==" "){
-	alert("Amount is required");
-	return false;}
-
- if(parseInt(form.amount.value)<0){
-	alert("can not enter negative amount");
-	return false;}
-
- if(button.value=="withdraw" && parseInt(form.amount.value)>5000){
-	alert("can not withdraw more than 5000");
-	return false;}
-
-    return true;
- }
-
-</script>
 </body>
 </html>
 
